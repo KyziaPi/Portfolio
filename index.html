@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yerika Elaine S. Gueco | Portfolio</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS & Custom JavaScript -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+</head>
+<body class="font-sans antialiased text-brand-text tech-grid">
+
+  <!-- Navigation -->
+<!-- Navigation -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/90 border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-xl font-bold font-mono text-brand-light tracking-wider flex items-center gap-2">
+        <span class="text-brand-accent">&lt;/&gt;</span> YERIKA.GUECO
+      </a>
+
+      <!-- Desktop Navigation Links (Hidden on Mobile) -->
+      <div class="hidden md:flex space-x-8 font-mono text-sm">
+        <a href="#skills" class="hover:text-brand-accent transition-colors">01. // SKILLS</a>
+        <a href="#projects" class="hover:text-brand-accent transition-colors">02. // PROJECTS</a>
+        <a href="#certifications" class="hover:text-brand-accent transition-colors">03. // CERTIFICATIONS</a>
+        <a href="#contact" class="hover:text-brand-accent transition-colors">04. // CONTACT</a>
+      </div>
+
+      <!-- Desktop Contact CTA -->
+      <div class="hidden md:block">
+        <a href="mailto:guecoyerikaelaine@gmail.com" class="font-mono text-xs border border-brand-accent text-brand-accent hover:bg-brand-accent/10 px-4 py-2 rounded transition-all">
+          GET_IN_TOUCH
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle Button (Shown on Small Screens) -->
+      <button type="button" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-slate-300 hover:text-brand-accent text-xl p-2 focus:outline-none" aria-label="Toggle Menu">
+        <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-border/60 bg-brand-dark/95 backdrop-blur-md px-6 py-5 font-mono text-sm space-y-4">
+      <a href="#skills" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-accent transition-colors py-1">01. // SKILLS</a>
+      <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-accent transition-colors py-1">02. // PROJECTS</a>
+      <a href="#certifications" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-accent transition-colors py-1">03. // CERTIFICATIONS</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-accent transition-colors py-1">04. // CONTACT</a>
+      
+      <div class="pt-2 border-t border-brand-border/40">
+        <a href="mailto:guecoyerikaelaine@gmail.com" class="block text-center font-mono text-xs border border-brand-accent text-brand-accent hover:bg-brand-accent/10 py-2.5 rounded transition-all">
+          GET_IN_TOUCH
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-[85vh] flex items-center relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-20 w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-8 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-accent/30 bg-brand-accent/10 text-brand-accent font-mono text-xs">
+          <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span> Open for Opportunities
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-brand-light tracking-tight">
+          Yerika Elaine S. Gueco
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-mono text-brand-accent">
+          Junior AI / Data Engineer
+        </h2>
+        <p class="text-lg max-w-2xl leading-relaxed">
+          Computer Science student passionate about building reliable data systems, computer vision applications, and practical AI solutions. Experienced in dataset processing, structured data pipelines, and bridging complex backends with user interfaces.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-4 font-mono text-sm">
+          <a href="#projects" class="bg-brand-accent text-brand-dark font-bold px-6 py-3 rounded hover:bg-cyan-400 transition-all flex items-center gap-2">
+            View Projects <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="https://github.com/KyziaPi" target="_blank" class="border border-brand-border bg-brand-card hover:border-brand-accent px-6 py-3 rounded text-brand-light transition-all flex items-center gap-2">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/yerika-elaine-gueco-08287b39a/" target="_blank" class="border border-brand-border bg-brand-card hover:border-brand-accent px-6 py-3 rounded text-brand-light transition-all flex items-center gap-2">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Tech Terminal Widget -->
+      <div class="md:col-span-4">
+        <div class="bg-brand-card border border-brand-border rounded-lg p-4 font-mono text-xs shadow-2xl relative">
+          <div class="flex items-center gap-2 pb-3 mb-3 border-b border-brand-border text-slate-500">
+            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            <span class="ml-auto text-[10px]">bash - system_info</span>
+          </div>
+          <div class="space-y-2 text-slate-300">
+            <p><span class="text-brand-accent">$</span> <span class="text-yellow-400">cat</span> profile.json</p>
+            <p class="text-slate-400">{</p>
+            <p class="pl-4"><span class="text-cyan-400">"status"</span>: <span class="text-emerald-400">"BS CS @ AUF (2023-2028)"</span>,</p>
+            <p class="pl-4"><span class="text-cyan-400">"location"</span>: <span class="text-emerald-400">"Pampanga, Philippines"</span>,</p>
+            <p class="pl-4"><span class="text-cyan-400">"academic_standing"</span>: <span class="text-emerald-400">"Top 2-4 in class"</span>,</p>
+            <p class="pl-4"><span class="text-cyan-400">"certifications"</span>: [</p>
+            <p class="pl-8">
+              <button type="button" onclick="openCertModal('az900')" class="text-emerald-400 hover:text-brand-accent hover:underline inline-flex items-center gap-1">
+                "AZ-900: Azure Fundamentals" <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </button>,
+            </p>
+            <p class="pl-8">
+              <button type="button" onclick="openCertModal('cs50x')" class="text-emerald-400 hover:text-brand-accent hover:underline inline-flex items-center gap-1">
+                "CS50x" <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </button>,
+              <button type="button" onclick="openCertModal('ccna')" class="text-emerald-400 hover:text-brand-accent hover:underline inline-flex items-center gap-1">
+                "CCNA: Intro to Networks" <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </button>
+            </p>
+            <p class="pl-4">]</p>
+            <p class="text-slate-400">}</p>
+            <p><span class="text-brand-accent">$</span> <span class="animate-pulse">_</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. SKILLS SECTION -->
+  <section id="skills" class="py-20 border-t border-brand-border bg-brand-dark/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="text-xs font-mono text-brand-accent tracking-widest uppercase mb-2">01. Technical Stack</h2>
+        <h3 class="text-3xl font-bold text-brand-light">Skills & Engineering Tools</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Programming & Core -->
+        <div class="bg-brand-card border border-brand-border rounded-lg p-6 hover:border-brand-accent/50 transition-all">
+          <div class="text-brand-accent text-2xl mb-4"><i class="fa-solid fa-code"></i></div>
+          <h4 class="text-brand-light font-bold font-mono mb-3">Programming</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Python</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> SQL</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> JavaScript</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> PHP</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> C#</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> CSS</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> CSS Frameworks (Bootstrap & Tailwind CSS)</li>
+          </ul>
+        </div>
+
+        <!-- AI & Data Engineering -->
+        <div class="bg-brand-card border border-brand-border rounded-lg p-6 hover:border-brand-accent/50 transition-all">
+          <div class="text-brand-accent text-2xl mb-4"><i class="fa-solid fa-brain"></i></div>
+          <h4 class="text-brand-light font-bold font-mono mb-3">AI & Data Pipelines</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> TensorFlow / Keras</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Pandas</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> NumPy</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Scikit-learn</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Exploratory Data Analysis</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Image Data Split & Leakage Control</li>
+          </ul>
+        </div>
+
+        <!-- Databases & Cloud -->
+        <div class="bg-brand-card border border-brand-border rounded-lg p-6 hover:border-brand-accent/50 transition-all">
+          <div class="text-brand-accent text-2xl mb-4"><i class="fa-solid fa-database"></i></div>
+          <h4 class="text-brand-light font-bold font-mono mb-3">Databases & Cloud</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> PostgreSQL</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> MySQL</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> SQLite</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Microsoft Azure (AZ-900)</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Relational Schema Design</li>
+          </ul>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="bg-brand-card border border-brand-border rounded-lg p-6 hover:border-brand-accent/50 transition-all">
+          <div class="text-brand-accent text-2xl mb-4"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h4 class="text-brand-light font-bold font-mono mb-3">Developer Tools</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Git</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> GitHub</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Flask</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> Google Colab</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> XAMPP</li>
+            <li class="flex items-center gap-2"><span class="text-brand-accent">▸</span> VSCode</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROJECTS SECTION -->
+  <section id="projects" class="py-20 border-t border-brand-border">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="text-xs font-mono text-brand-accent tracking-widest uppercase mb-2">02. Featured Works</h2>
+        <h3 class="text-3xl font-bold text-brand-light">Systems & Applications Developed</h3>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Project 1: RefraScan -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 lg:p-8 glow-effect transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-brand-accent bg-brand-accent/10 border border-brand-accent/30 px-2 py-1 rounded">THESIS PROJECT</span>
+              <span class="text-xs font-mono text-slate-400">AUF Medical Center Partnership</span>
+            </div>
+            <h4 class="text-2xl font-bold text-brand-light">RefraScan – AI-Based Fundus Image Screening System</h4>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Problem Addressed:</strong> Manual refractive error screening requires extensive specialist evaluation. High risk of data leakage when splitting image datasets at image-level rather than patient-level. Hand-written records are hard to make exploratory data analysis out of.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Solution & Features:</strong> Developed a clinical decision-support web application for the Lasik Surgery Clinic at AUF Medical Center. Trained a deep learning classifier (ResNet) to categorize fundus images into myopia, hyperopia, and emmetropia while implementing strict patient-level splitting across 1,000+ observations. Digitized the patient records of AUFMC Lasik Surgery Clinic for exploratory data analysis and future research.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Python</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">TensorFlow/Keras</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Flask</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">PostgreSQL</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Pandas / NumPy</span>
+            </div>
+            <div class="pt-4 flex gap-4 font-mono text-xs">
+              <a href="https://github.com/KyziaPi/RefraScan" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-github"></i> Model Training Repository
+              </a>
+              <a href="https://github.com/KyziaPi/RefraScan-App" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-github"></i> App Repository
+              </a>
+              <a href="https://youtu.be/gtOyeajRKfo" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-solid fa-play"></i> Watch Video Demo
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-brand-dark border border-brand-border rounded-lg p-4 font-mono text-xs">
+            <div class="project-carousel relative rounded-lg overflow-hidden border border-brand-border mb-3 group bg-black/70 shadow-lg">
+              <div class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
+                <div class="carousel-slide w-full h-full flex items-center justify-center" data-caption="Inference Engine">
+                  <img src="images/demos/Inference_Engine_New1.png" alt="Inference Engine" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Inference Results">
+                  <img src="images/demos/Inference_Results_Add.png" alt="Inference Results" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Patient Records">
+                  <img src="images/demos/Patient_Records.png" alt="Patient Records" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Patient Record Details">
+                  <img src="images/demos/Patient_record_detailed.png" alt="Patient Record Details" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <button type="button" onclick="moveCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button type="button" onclick="moveCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 bg-brand-dark/90 border-t border-brand-border/60 py-1 px-3 text-center font-mono text-[11px] text-brand-accent tracking-wide">
+                <span class="carousel-caption">Inference Engine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Lexis / Guessarium -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 lg:p-8 glow-effect transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-1 rounded">WEB & INTERPRETER</span>
+            </div>
+            <h4 class="text-2xl font-bold text-brand-light">Lexis / Guessarium – Web-Based DSL Game Platform</h4>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Problem Addressed:</strong> Static word games lack customization for specific domain vocabularies and flexible game logic configuration.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Solution & Features:</strong> Engineered a domain-specific language (DSL) interpreter that dynamically configures word-guessing game mechanics and custom word banks. Created session management, player tracking, and flexible text-file data storage interfaces.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Python</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Flask</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">DSL Design</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Bootstrap / jQuery</span>
+            </div>
+            <div class="pt-4 flex gap-4 font-mono text-xs">
+              <a href="https://github.com/raldddddddd/Lexis" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-github"></i> Language Repository
+              </a>
+              <a href="https://github.com/KyziaPi/Lexis_WebApp" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-github"></i> App Repository
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-brand-dark border border-brand-border rounded-lg p-4 font-mono text-xs">
+            <div class="project-carousel relative rounded-lg overflow-hidden border border-brand-border mb-3 group bg-black/70 shadow-lg">
+              <div class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
+                <div class="carousel-slide w-full h-full flex items-center justify-center" data-caption="Home Page">
+                  <img src="images/demos/Guessarium_Home.png" alt="Home Page" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Snuzzle Game View">
+                  <img src="images/demos/Guessarium_Snuzzle.png" alt="Snuzzle Game" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Filmster Game View">
+                  <img src="images/demos/Guessarium_Filmster.png" alt="Filmster Game" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Raildle Game View">
+                  <img src="images/demos/Guessarium_Raildle.png" alt="Raildle Game" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <button type="button" onclick="moveCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button type="button" onclick="moveCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 bg-brand-dark/90 border-t border-brand-border/60 py-1 px-3 text-center font-mono text-[11px] text-brand-accent tracking-wide">
+                <span class="carousel-caption">Home Page</span>
+              </div>
+            </div>
+            <div class="bg-black/50 p-2.5 rounded border border-brand-border text-[11px] font-mono text-slate-300">
+              <span class="text-purple-400">CONFIG</span> GameRules {<br>
+              &nbsp;&nbsp;<span class="text-cyan-400">GameModes</span>: 3,<br>
+              &nbsp;&nbsp;<span class="text-cyan-400">WordBanks</span>: "snuzzle, filmster, raildle",<br>
+              &nbsp;&nbsp;<span class="text-cyan-400">SessionSaving</span>: true<br>
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: SayIt -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 lg:p-8 glow-effect transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-purple-400 bg-purple-500/10 border border-purple-500/30 px-2 py-1 rounded">FULL-STACK & NLP</span>
+            </div>
+            <h4 class="text-2xl font-bold text-brand-light">SayIt – Clothing Review & Sentiment Analysis System</h4>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Problem Addressed:</strong> E-commerce feedback processing often misses qualitative customer sentiment in raw text reviews.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Solution & Features:</strong> Constructed an MVC architecture web application backed by MySQL for product review collection. Integrated sentiment processing logic to classify user feedback into actionable insights.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">PHP (PDO)</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">MySQL</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Sentiment Analysis</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">MVC Architecture</span>
+            </div>
+            <div class="pt-4 flex gap-4 font-mono text-xs">
+              <a href="#" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-brand-dark border border-brand-border rounded-lg p-4 font-mono text-xs">
+            <div class="project-carousel relative rounded-lg overflow-hidden border border-brand-border mb-3 group bg-black/70 shadow-lg">
+              <div class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
+                <div class="carousel-slide w-full h-full flex items-center justify-center" data-caption="Home Page">
+                  <img src="images/demos/SayIt_Homepage.png" alt="SayIt Dashboard" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Review Sentiment">
+                  <img src="images/demos/SayIt_ReviewSentiment.png" alt="SayIt Review Sentiment" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Sentiment Chart">
+                  <img src="images/demos/SayIt_SentimentChart.png" alt="SayIt Sentiment Chart" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <button type="button" onclick="moveCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button type="button" onclick="moveCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 bg-brand-dark/90 border-t border-brand-border/60 py-1 px-3 text-center font-mono text-[11px] text-brand-accent tracking-wide">
+                <span class="carousel-caption">Home Page</span>
+              </div>
+            </div>
+            <div class="space-y-1.5 text-slate-400">
+              <div class="flex justify-between"><span>Architecture:</span> <span class="text-brand-light">MVC Pattern</span></div>
+              <div class="flex justify-between"><span>DB Connector:</span> <span class="text-brand-light">PHP Data Objects (PDO)</span></div>
+              <div class="flex justify-between"><span>Analytics Engine:</span> <span class="text-purple-400">Text Sentiment Scoring</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Shiftify -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 lg:p-8 glow-effect transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-2 py-1 rounded">ALGORITHMIC GAME & FULL-STACK</span>
+            </div>
+            <h4 class="text-2xl font-bold text-brand-light">Shiftify – Interactive Web-Based Sliding Puzzle Platform</h4>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Problem Addressed:</strong> Standard tile-shuffle games often generate unsolvable board permutations or rely on full-page reloads that disrupt real-time interaction.
+            </p>
+            <p class="text-sm leading-relaxed text-slate-300">
+              <strong class="text-brand-light">Solution & Features:</strong> Engineered a full-stack puzzle application supporting 3x3, 4x4, and 5x5 boards. Implemented mathematical inversion logic to guarantee 100% solvable board generation. Built an asynchronous AJAX state engine for real-time timer/move updates and a multi-category leaderboard backed by SQLite.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Python (Flask)</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">JavaScript (AJAX)</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">SQLite</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Solvability Algorithms</span>
+              <span class="text-xs font-mono bg-brand-dark px-2.5 py-1 rounded border border-brand-border text-slate-300">Bootstrap</span>
+            </div>
+            <div class="pt-4 flex flex-wrap gap-4 font-mono text-xs">
+              <a href="https://github.com/KyziaPi/Shiftify/tree/main" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-github"></i> GitHub Repository
+              </a>
+              <a href="https://youtu.be/6pWC3xlOnkY" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
+                <i class="fa-solid fa-play"></i> Watch Video Demo
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 bg-brand-dark border border-brand-border rounded-lg p-4 font-mono text-xs">
+            <div class="project-carousel relative rounded-lg overflow-hidden border border-brand-border mb-3 group bg-black/70 shadow-lg">
+              <div class="relative w-full aspect-video flex items-center justify-center overflow-hidden">
+                <div class="carousel-slide w-full h-full flex items-center justify-center" data-caption="Mode Selection">
+                  <img src="images/demos/Shiftify_ModeSelection.png" alt="Shiftify Mode Selection" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Game Board View">
+                  <img src="images/demos/Shiftify_GameBoard.png" alt="Shiftify Game Board View" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide hidden w-full h-full flex items-center justify-center" data-caption="Leaderboard View">
+                  <img src="images/demos/Shiftify_Leaderboard.png" alt="Shiftify Leaderboard View" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <button type="button" onclick="moveCarousel(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button type="button" onclick="moveCarousel(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-dark/80 hover:bg-brand-accent hover:text-brand-dark text-brand-light w-8 h-8 rounded-full border border-brand-border transition-all flex items-center justify-center z-10 shadow-md">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+              <div class="absolute bottom-0 inset-x-0 bg-brand-dark/90 border-t border-brand-border/60 py-1 px-3 text-center font-mono text-[11px] text-brand-accent tracking-wide">
+                <span class="carousel-caption">Mode Selection</span>
+              </div>
+            </div>
+            <div class="bg-black/50 p-2.5 rounded border border-brand-border text-[11px] font-mono text-slate-300 space-y-1">
+              <p class="text-emerald-400">// Inversion count verification</p>
+              <p><span class="text-purple-400">def</span> <span class="text-cyan-400">is_solvable</span>(board, width):</p>
+              <p class="pl-3 text-slate-400">inv_count = count_inversions(board)</p>
+              <p class="pl-3 text-slate-400"><span class="text-purple-400">return</span> inv_count % 2 == 0</p>
+            </div>
+            <div class="mt-3 space-y-1 text-slate-400 text-[11px]">
+              <div class="flex justify-between"><span>Difficulties:</span> <span class="text-brand-light">Easy (3x3), Medium (4x4), Hard (5x5)</span></div>
+              <div class="flex justify-between"><span>Ranking Metrics:</span> <span class="text-brand-light">Shortest Time & Fewest Moves</span></div>
+              <div class="flex justify-between"><span>State Management:</span> <span class="text-cyan-400">AJAX (No Page Reload)</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-20 border-t border-brand-border bg-brand-dark/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <h2 class="text-xs font-mono text-brand-accent tracking-widest uppercase mb-2">03. Verified Credentials</h2>
+        <h3 class="text-3xl font-bold text-brand-light">Certifications & Professional Development</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Microsoft Azure (AZ-900) -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-brand-accent bg-brand-accent/10 border border-brand-accent/30 px-2 py-0.5 rounded">
+                <i class="fa-brands fa-microsoft"></i> Microsoft
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Verified</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-brand-accent transition-colors">
+              Microsoft Certified: Azure Fundamentals (AZ-900)
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Cloud concepts, Azure architecture, services, management, and governance.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('az900')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. CS50x -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-graduation-cap"></i> Harvard / edX
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Verified</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-emerald-400 transition-colors">
+              CS50x: Introduction to Computer Science
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Algorithmic thinking, memory management, and full-stack software development.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('cs50x')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. CCNA -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-purple-400 bg-purple-500/10 border border-purple-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-network-wired"></i> Cisco
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Verified</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-purple-400 transition-colors">
+              CCNA: Introduction to Networks
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Network architecture, IP addressing, subnetting, and security fundamentals.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('ccna')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Data Science -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-yellow-400 bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-chart-line"></i> Analytics
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Coursework</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-yellow-400 transition-colors">
+              Introduction to Data Science
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Data cleaning, exploratory data analysis (EDA), and statistical modeling workflows.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('datascience')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Cybersecurity -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-red-400 bg-red-500/10 border border-red-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-shield-halved"></i> Security
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Coursework</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-red-400 transition-colors">
+              Introduction to Cybersecurity
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Cyber threat landscapes, network security controls, and data protection strategies.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('cybersecurity')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. 1st Regional AI Conference 2025 -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-purple-400 bg-purple-500/10 border border-purple-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-brain"></i> AI Conference
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Dec 2025</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-purple-400 transition-colors">
+              1st Regional AI Conference 2025
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Reinventing learning through AI, emerging machine learning applications, and educational tools.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('regionalai2025')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. The Next-Gen Developer -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-code-merge"></i> AI Ethics Seminar
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Apr 2025</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-emerald-400 transition-colors">
+              The Next-Gen Developer: Coding with Conscience
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Ethical coding, responsible AI usage, and development workflows in the Generative AI era.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('nextgen2025')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Ready for Deployment -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-2 py-0.5 rounded">
+                <i class="fa-solid fa-server"></i> Industry Immersion
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Mar 2026</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-cyan-400 transition-colors">
+              Ready for Deployment: Classroom to IT Ecosystem
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Career immersion with Lightstream8 & Thrive on enterprise IT software deployment.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('readyfordeployment2026')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 9. GIT. GUD Workshop -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-accent/50 transition-all flex flex-col justify-between group">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-brand-accent bg-brand-accent/10 border border-brand-accent/30 px-2 py-0.5 rounded">
+                <i class="fa-brands fa-github"></i> Workshop
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">Apr 2026</span>
+            </div>
+            <h5 class="text-base font-bold text-brand-light group-hover:text-brand-accent transition-colors">
+              GIT. GUD: Hands-on Workshop for Git & GitHub
+            </h5>
+            <p class="text-xs text-slate-400 line-clamp-2">
+              Version control mastery, collaborative Git workflows, and software engineering practices.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-brand-border/60">
+            <button type="button" onclick="openCertModal('gitgud2026')" class="w-full font-mono text-xs border border-brand-border bg-brand-dark/50 hover:border-brand-accent hover:text-brand-accent text-slate-300 py-2.5 rounded transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-certificate text-brand-accent"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CONTACT SECTION -->
+  <section id="contact" class="py-20 border-t border-brand-border bg-brand-dark/50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-xs font-mono text-brand-accent tracking-widest uppercase mb-2">04. Get In Touch</h2>
+      <h3 class="text-3xl font-bold text-brand-light mb-6">Let's Connect & Collaborate</h3>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">
+        I am actively looking for opportunities in AI Development, Data Engineering, and Database System Optimization. Feel free to reach out for research or engineering collaborations.
+      </p>
+      
+      <div class="inline-flex flex-col sm:flex-row gap-4 justify-center items-center font-mono text-sm">
+        <a href="mailto:guecoyerikaelaine@gmail.com" class="bg-brand-accent text-brand-dark font-bold px-8 py-4 rounded hover:bg-cyan-400 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-envelope"></i> Send Email
+        </a>
+        <a href="https://www.linkedin.com/in/yerika-elaine-gueco-08287b39a/" target="_blank" class="border border-brand-border bg-brand-card hover:border-brand-accent px-8 py-4 rounded text-brand-light transition-all flex items-center gap-2">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+        </a>
+      </div>
+
+      <div class="mt-12 text-xs font-mono text-slate-500">
+        Located in Pampanga, Philippines • Open to Remote & Hybrid Roles
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-brand-border text-center font-mono text-xs text-slate-600">
+    <p>© 2026 Yerika Elaine S. Gueco. Built with HTML5, Tailwind CSS & JavaScript.</p>
+  </footer>
+
+  <!-- Certifications Popup Modal -->
+  <div id="cert-modal" onclick="if(event.target === this) closeCertModal()" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 md:p-6">
+    <div class="bg-brand-card border border-brand-border rounded-xl w-full max-w-5xl overflow-hidden shadow-2xl flex flex-col h-[92vh] max-h-[850px]">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between px-5 py-3.5 border-b border-brand-border bg-brand-dark/80">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-certificate text-brand-accent"></i>
+          <h3 class="font-mono font-bold text-brand-light text-xs md:text-sm tracking-wide">// CERTIFICATIONS & CREDENTIALS SHOWCASE</h3>
+        </div>
+        <button type="button" onclick="closeCertModal()" class="text-slate-400 hover:text-brand-light font-mono text-xs px-2.5 py-1 rounded border border-brand-border hover:border-brand-accent transition-all flex items-center gap-1">
+          <i class="fa-solid fa-xmark"></i> <span>[ESC]</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Split Layout) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 flex-1 overflow-hidden">
+        
+        <!-- Left Sidebar: Certificate Selection List (4 Cols) -->
+        <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-brand-border bg-brand-dark/50 p-3 space-y-1.5 overflow-y-auto max-h-[25vh] md:max-h-none" id="cert-list">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Right Panel: Main Focus Image & Details (8 Cols) -->
+        <div class="md:col-span-8 p-5 md:p-6 flex flex-col justify-between overflow-y-auto bg-brand-card">
+          
+          <div class="space-y-4 flex-1 flex flex-col">
+            
+            <!-- Main Featured Certificate Image Showcase -->
+            <div id="cert-image-container" class="relative w-full h-[300px] sm:h-[360px] md:h-[440px] rounded-lg overflow-hidden border border-brand-border bg-black/60 flex items-center justify-center p-2 group cursor-zoom-in" onclick="openCertLightbox()">
+              <img id="cert-image" src="" alt="Certificate Preview" class="w-full h-full object-contain rounded transition-transform duration-300 group-hover:scale-[1.02]">
+              
+              <!-- Hover Overlay Indicator -->
+              <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <span class="bg-brand-dark/90 text-brand-accent border border-brand-accent/40 font-mono text-xs px-3 py-1.5 rounded shadow-lg flex items-center gap-2">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Enlarge / Full Resolution
+                </span>
+              </div>
+            </div>
+
+            <!-- Certificate Header Meta Info -->
+            <div class="pt-2">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded border border-brand-accent/30 bg-brand-accent/10 text-brand-accent font-mono text-[11px]">
+                  <i class="fa-solid fa-award"></i> <span id="cert-issuer">Issuer</span>
+                </div>
+                <span class="text-xs text-slate-400 font-mono" id="cert-date">Issued Date</span>
+              </div>
+              
+              <h4 class="text-base md:text-xl font-bold text-brand-light mb-1.5" id="cert-title">Certificate Title</h4>
+              <p class="text-xs md:text-sm text-slate-300 leading-relaxed" id="cert-desc">Description</p>
+            </div>
+
+          </div>
+
+          <!-- Bottom Verification Link -->
+          <div id="cert-link-container" class="pt-4 mt-4 border-t border-brand-border flex justify-end">
+            <a id="cert-link" href="" target="_blank" class="inline-flex items-center gap-2 font-mono text-xs bg-brand-accent text-brand-dark font-bold px-5 py-2.5 rounded hover:bg-cyan-400 transition-all">
+              <span>Verify Official Credential</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Lightbox Overlay for Image Inspection -->
+  <div id="cert-lightbox" onclick="closeCertLightbox()" class="fixed inset-0 z-[60] bg-black/95 backdrop-blur-md hidden flex items-center justify-center p-4 cursor-zoom-out">
+    <button type="button" onclick="closeCertLightbox()" class="absolute top-5 right-5 text-slate-300 hover:text-white font-mono text-sm bg-brand-card/80 border border-brand-border px-3 py-1.5 rounded z-10">
+      <i class="fa-solid fa-xmark"></i> Close Fullscreen
+    </button>
+    <img id="lightbox-image" src="" alt="Certificate Fullscreen" class="max-w-full max-h-[94vh] object-contain rounded shadow-2xl">
+  </div>
+
+</body>
+</html>
