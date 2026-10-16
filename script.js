@@ -26,13 +26,22 @@ tailwind = {
 // Certifications Dataset (Includes image URLs)
 const certificationsData = [
   {
+  id: 'dp900',
+  title: 'Microsoft Certified: Azure Data Fundamentals (DP-900)',
+  issuer: 'Microsoft',
+  date: 'Verified Credential',
+  image: 'images/certifications/DP900.png', // Replace with your image path or badge URL
+  desc: 'Validates foundational knowledge of core data concepts, relational and non-relational data offerings on Microsoft Azure, transactional & analytical processing workloads, and data visualization.',
+  link: 'https://learn.microsoft.com/api/credentials/share/en-us/YerikaElaineGueco-1348/F9AFD6B403652503?sharingId=CBE5F51B3693C280' // Replace with your Credly / Microsoft transcript link
+  },
+  {
     id: 'az900',
     title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
     issuer: 'Microsoft',
     date: 'Verified Credential',
-    image: 'images/certifications/AZ-900.png',
+    image: 'images/certifications/AZ900.png',
     desc: 'Validates foundational knowledge of cloud concepts, Azure architecture, services, management, and governance.',
-    link: 'https://learn.microsoft.com/en-us/users/yerikaelainegueco-1348/credentials/12de351e94b65261'
+    link: 'https://learn.microsoft.com/api/credentials/share/en-us/YerikaElaineGueco-1348/12DE351E94B65261?sharingId=CBE5F51B3693C280'
   },
   {
     id: 'cs50x',
@@ -86,15 +95,6 @@ const certificationsData = [
     date: 'April 29, 2025',
     image: 'images/certifications/Next-Gen_Developer.jpg',
     desc: 'Seminar addressing ethical software development, responsible AI integration, and coding practices in the era of Generative AI tools.',
-    link: null
-  },
-  {
-    id: 'readyfordeployment2026',
-    title: 'Ready for Deployment: From Classroom Lab to the IT Ecosystem',
-    issuer: 'Lightstream8 & Thrive',
-    date: 'March 24, 2026',
-    image: 'images/certifications/ReadyForDeployment.jpg',
-    desc: 'Collaborative career immersion seminar exploring modern enterprise IT ecosystems, software deployment pipelines, and industry readiness.',
     link: null
   },
   {
